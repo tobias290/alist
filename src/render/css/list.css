@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Gugi|Open+Sans:300,400,600,800");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+input, select, button, textarea {
+  outline: none; }
+
+::-webkit-scrollbar {
+  background: white;
+  height: 14px;
+  width: 14px; }
+
+::-webkit-scrollbar-thumb {
+  background: #9D9D9D;
+  border-radius: 10px;
+  border: 2px solid white; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #848484; }
+
+.background {
+  /*background: #333;*/
+  width: 100%;
+  height: 700px;
+  display: initial; }
+
+.floating-btn {
+  background: #222;
+  bottom: 20px;
+  color: #fff;
+  font-size: 1em;
+  padding: 20px;
+  position: fixed;
+  right: 20px; }
+  .floating-btn:hover {
+    background: #16D36B; }
+
+.close-btn {
+  background: #D9534F;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 25px;
+  margin: 10px 10px 0 0;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 5px;
+  width: 25px; }
+  .close-btn:hover {
+    background: #C9302C; }
+
+#todo-container {
+  background: #FFF;
+  height: calc(100% - 95px);
+  margin: auto;
+  max-width: 400px;
+  transition-duration: 1s;
+  overflow-y: auto; }
+  #todo-container.blur {
+    filter: blur(5px); }
+  #todo-container.null-blur {
+    filter: blur(0); }
+  #todo-container > > h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0 0 0 15px; }
+  #todo-container > p {
+    font-size: 14px;
+    margin-left: 15px; }
+  #todo-container > #todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    #todo-container > #todo-list .fa-layers.message {
+      top: -50px;
+      font-size: 3em; }
+      #todo-container > #todo-list .fa-layers.message > #slash {
+        font-size: 2em;
+        transform: rotate(-45deg); }
+    #todo-container > #todo-list .message {
+      bottom: 0;
+      font-family: "Gugi", cursive;
+      font-size: 1.7em;
+      height: fit-content;
+      left: 0;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      text-align: center;
+      top: 100px;
+      width: 75%;
+      max-width: 280px; }
+    #todo-container > #todo-list > li {
+      border-bottom: 1px solid lightgrey;
+      padding: 30px 40px;
+      position: relative; }
+      #todo-container > #todo-list > li:hover > .li-icons {
+        opacity: 1; }
+      #todo-container > #todo-list > li.over-top {
+        border-top: 1px solid #298AFF; }
+      #todo-container > #todo-list > li.over-bottom {
+        border-bottom: 1px solid #298AFF; }
+      #todo-container > #todo-list > li > p#todo-note {
+        margin-bottom: 0; }
+      #todo-container > #todo-list > li:last-child {
+        border-bottom: none; }
+      #todo-container > #todo-list > li > .fa-circle {
+        color: #298AFF; }
+      #todo-container > #todo-list > li > .has-note {
+        padding: 15px 0; }
+      #todo-container > #todo-list > li > .no-note.li-icons {
+        margin-top: -10px; }
+      #todo-container > #todo-list > li > .li-icons {
+        opacity: 0;
+        height: 45px;
+        width: 50px;
+        float: right;
+        padding: 0; }
+        #todo-container > #todo-list > li > .li-icons > div {
+          transition-duration: 1s;
+          padding: 13px;
+          width: 17px;
+          border-radius: 50%;
+          cursor: pointer; }
+          #todo-container > #todo-list > li > .li-icons > div > .fa-layers {
+            text-align: center;
+            width: 40px;
+            position: relative;
+            top: 1px;
+            left: -11.5px; }
+            #todo-container > #todo-list > li > .li-icons > div > .fa-layers > .fa-circle {
+              font-size: 2em; }
+            #todo-container > #todo-list > li > .li-icons > div > .fa-layers > .fa-trash-alt {
+              color: #fff; }
+          #todo-container > #todo-list > li > .li-icons > div:hover {
+            background: rgba(0, 0, 0, 0.1); }
+      #todo-container > #todo-list > li > .fa-ellipsis-v {
+        float: right; }
+      #todo-container > #todo-list > li > #todo-label {
+        display: inline;
+        font-family: "Gugi", cursive;
+        font-weight: 600;
+        padding: 10px 50px; }
+      #todo-container > #todo-list > li > #todo-note {
+        color: #666;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.8em;
+        height: 10px;
+        margin-left: 50px; }
+      #todo-container > #todo-list > li > #buttons {
+        border-top: 1px solid lightgrey;
+        color: grey;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        text-transform: uppercase; }
+        #todo-container > #todo-list > li > #buttons > a {
+          cursor: pointer;
+          padding: 15px 10px 0; }
+          #todo-container > #todo-list > li > #buttons > a:first-child {
+            padding-left: 0; }
+        #todo-container > #todo-list > li > #buttons > div > * {
+          cursor: pointer;
+          padding: 0 10px; }
+  #todo-container > #todo-text {
+    padding: 0;
+    width: 100%; }
+  #todo-container > #todo-text {
+    margin: 0;
+    padding: 20px 20px;
+    width: calc(70% - 15px); }
+  #todo-container > #todo-submit {
+    background: #222;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 0 -5px;
+    padding: 22px 20px;
+    text-transform: uppercase;
+    width: calc(30% - 30px); }
+
+.check-icon {
+  bottom: 0;
+  height: 30px;
+  margin: auto 20px auto auto;
+  position: absolute;
+  top: 0; }
+
+img.complete {
+  color: #16D36B; }
+
+img.incomplete {
+  fill: #666666; }
+
+li.complete {
+  background: #E6FFF1; }
+
+/*# sourceMappingURL=list.css.map */

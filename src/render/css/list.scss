@@ -1,0 +1,231 @@
+@import "main";
+
+#todo-container {
+    background: #FFF;
+    height: calc(100% - 95px);
+    margin: auto;
+    max-width: 400px;
+    transition-duration: 1s;
+    overflow-y: auto;
+
+    &.blur{
+        filter: blur(5px);
+    }
+
+    &.null-blur {
+        filter: blur(0);
+    }
+
+    & > > h1 {
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin: 0 0 0 15px;
+    }
+
+    & > p {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    & > #todo-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        .fa-layers.message {
+            top: -50px;
+            font-size: 3em;
+
+            & > #slash {
+                font-size: 2em;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .message {
+            bottom: 0;
+            font-family: $brand-font;
+            font-size: 1.7em;
+            height: fit-content;
+            left: 0;
+            position: absolute;
+            margin: auto;
+            right: 0;
+            text-align: center;
+            top: 100px;
+            width: 75%;
+            max-width: 280px;
+        }
+
+        & > li {
+            border-bottom: 1px solid lightgrey;
+            padding: 30px 40px;
+            position: relative;
+
+            &:hover {
+                & > .li-icons {
+                    opacity: 1;
+                }
+            }
+
+            &.over-top {
+                border-top: 1px solid $brand-secondary;
+            }
+
+            &.over-bottom {
+                border-bottom: 1px solid $brand-secondary;
+            }
+
+            & > p#todo-note {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            & > .fa-circle {
+                color: $brand-secondary;
+            }
+
+            & > .has-note {
+                padding: 15px 0;
+            }
+
+            & > .no-note {
+                &.li-icons  {
+                    margin-top: -10px
+                }
+            }
+
+            & > .li-icons {
+                opacity: 0;
+                height: 45px;
+                width: 50px;
+                float: right;
+                padding: 0;
+
+                & > div {
+                    transition-duration: 1s;
+                    padding: 13px;
+                    width: 17px;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    & > .fa-layers {
+                        text-align: center;
+                        width: 40px;
+                        position: relative;
+                        top: 1px;
+                        left: -11.5px;
+
+                        & > .fa-circle {
+                            font-size: 2em;
+                        }
+
+                        & > .fa-trash-alt {
+                            color: #fff;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba(0, 0, 0, .1);
+                    }
+                }
+            }
+
+            & > .fa-ellipsis-v {
+                float: right;
+            }
+
+            & > #todo-label {
+                display: inline;
+                font-family: $brand-font;
+                font-weight: 600;
+                padding: 10px 50px;
+            }
+
+            & > #todo-note {
+                //border-left: 2px solid lightgray;
+                color: #666;
+                font-family: $secondary-font;
+                font-size: 0.8em;
+                height: 10px;
+                margin-left: 50px;
+                //padding-left: 10px;
+            }
+
+            & > #buttons {
+                border-top: 1px solid lightgrey;
+                color: grey;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                padding-top: 15px;
+                text-transform: uppercase;
+
+                & > a {
+                    cursor: pointer;
+                    padding: 15px 10px 0;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+
+                & > div > * {
+                    cursor: pointer;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+
+    & > #todo-text {
+        padding: 0;
+        width: 100%;
+    }
+
+    & > #todo-text {
+        margin: 0;
+        padding: 20px 20px;
+        width: calc(70% - 15px);
+    }
+
+    & > #todo-submit {
+        background: #222;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        margin: 0 0 0 -5px;
+        padding: 22px 20px;
+        text-transform: uppercase;
+        width: calc(30% - 30px);
+    }
+}
+
+.check-icon {
+    bottom: 0;
+    height: 30px;
+    margin: auto 20px auto auto;
+    position: absolute;
+    top: 0;
+}
+
+img.complete {
+    color: $brand-color;
+}
+
+img.incomplete {
+    fill: #666666;
+}
+
+// SIGNALS
+
+li.complete {
+    background: #E6FFF1;
+}
+
+li.incomplete {
+    //border-left: 5px solid red;
+}

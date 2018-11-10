@@ -1,0 +1,33 @@
+{
+    "name": "alist",
+    "description": "Note all the tasks you need to do, then check them off as you go.",
+    "author": "Toby Essex, Craig Hughes",
+    "version": "0.1.0",
+    "main": "src/main/electron.js",
+    "private": true,
+    "dependencies": {
+        "@fortawesome/react-fontawesome": "0.0.18",
+        "electron": "^1.8.4",
+        "electron-is-dev": "^0.3.0",
+        "logger": "0.0.1",
+        "prop-types": "latest",
+        "react": "^16.3.1",
+        "react-dom": "^16.3.1",
+        "react-fa": "^5.0.0",
+        "react-fontawesome": "^1.6.1",
+        "react-icons": "^2.2.7",
+        "react-scripts": "1.1.4"
+    },
+    "devDependencies": {
+        "concurrently": "^3.5.1",
+        "electron-builder": "^20.8.1",
+        "wait-on": "^2.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "application-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\""
+    }
+}

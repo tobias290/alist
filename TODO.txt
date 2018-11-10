@@ -1,0 +1,27 @@
+Features:
+	* Edit button to edit already created items
+	* Item groups
+	* Item dates with notifications (Possible feature, turns app more into a reminders app instead of a to-do app) (maybe?)
+	* Separate section for completed items (maybe?)
+	* Move item to top when complete
+	* Responsive layout
+	* Make smaller button (halves the apps height or something similar) (maybe?)
+	* Widen button to show multiple groups
+	
+	
+Settings:
+	* Launch on start up (node-auto-launch)
+	* Close minimises to tray
+
+
+Tray:
+    * Add minimise, maximise as option
+
+
+Refactoring:
+    * Refactor main code ('electron.js', 'fileWriter.js')
+
+
+For production:
+    * Change path of config file
+    * Remove developer tools

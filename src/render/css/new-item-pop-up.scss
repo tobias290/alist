@@ -1,0 +1,106 @@
+@import "main";
+@import "title-bar";
+
+#pop-up {
+    background: #FFF;
+    //box-shadow: 0 -2px 10px rgba(50, 50, 50, 1);
+    height: 230px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    &.closed {
+        bottom: -235px;
+        transition: bottom .3s ease-out 0s;
+    }
+
+    &.open {
+        bottom: 0;
+        transition: bottom .3s ease-out .3s;
+    }
+
+    #input-panel {
+        $input-font-size: 15px;
+
+        height: fit-content;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: fit-content;
+
+
+        #todo-text {
+            background: #FFF;
+            border: none;
+            color: black;
+            font-family: $brand-font;
+            font-size: $input-font-size;
+            height: 40px;
+            margin: auto auto 5px;
+            width: 300px;
+
+            &:hover::placeholder {
+                color: #666666;
+            }
+
+            &:focus::placeholder {
+                color: black;
+                transition-duration: .5s;
+            }
+        }
+
+        #separator {
+            background: #D9D9D9;
+            height: 2px;
+            margin-bottom: 1px;
+            margin-top: 1px;
+            width: 300px;
+        }
+
+        #todo-notes {
+            background: #FFF;
+            border: none;
+            color: black;
+            font-family: $brand-font;
+            font-size: $input-font-size;
+            height: 60px;
+            overflow: hidden;
+            padding-top: 20px;
+            resize: none;
+            width: 300px;
+
+            &:hover::placeholder {
+                color: #666666;
+            }
+
+            &:focus::placeholder {
+                color: black;
+                transition-duration: .5s;
+            }
+        }
+    }
+
+    #add-btn {
+        background: $brand-color;
+        border: none;
+        bottom: 0;
+        color: white;
+        height: 50px;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+
+        &:hover {
+            background: $brand-color-dark;
+        }
+
+        &:disabled {
+            background: $brand-color-dark;
+            color: #C1C1C1;
+            cursor: not-allowed;
+        }
+    }
+}

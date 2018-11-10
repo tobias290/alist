@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Gugi|Open+Sans:300,400,600,800");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+input, select, button, textarea {
+  outline: none; }
+
+::-webkit-scrollbar {
+  background: white;
+  height: 14px;
+  width: 14px; }
+
+::-webkit-scrollbar-thumb {
+  background: #9D9D9D;
+  border-radius: 10px;
+  border: 2px solid white; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #848484; }
+
+.background {
+  /*background: #333;*/
+  width: 100%;
+  height: 700px;
+  display: initial; }
+
+.floating-btn {
+  background: #222;
+  bottom: 20px;
+  color: #fff;
+  font-size: 1em;
+  padding: 20px;
+  position: fixed;
+  right: 20px; }
+  .floating-btn:hover {
+    background: #16D36B; }
+
+.close-btn {
+  background: #D9534F;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 25px;
+  margin: 10px 10px 0 0;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 5px;
+  width: 25px; }
+  .close-btn:hover {
+    background: #C9302C; }
+
+#settings {
+  background: white;
+  height: calc(100% - 95px);
+  position: absolute;
+  width: 100%;
+  top: 95px;
+  padding-top: 50px; }
+  #settings .section {
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+    font-family: "Gugi", cursive;
+    height: 100px;
+    line-height: 100px;
+    width: calc(100% - 30px);
+    margin: auto; }
+    #settings .section .information {
+      max-width: 250px;
+      margin-left: 10px; }
+    #settings .section .switch {
+      top: 30px;
+      right: 30px;
+      float: right; }
+
+/*# sourceMappingURL=settings.css.map */

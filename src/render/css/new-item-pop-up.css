@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css?family=Gugi|Open+Sans:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Gugi|Open+Sans:300,400,600,800");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+input, select, button, textarea {
+  outline: none; }
+
+::-webkit-scrollbar {
+  background: white;
+  height: 14px;
+  width: 14px; }
+
+::-webkit-scrollbar-thumb {
+  background: #9D9D9D;
+  border-radius: 10px;
+  border: 2px solid white; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #848484; }
+
+.background {
+  /*background: #333;*/
+  width: 100%;
+  height: 700px;
+  display: initial; }
+
+.floating-btn {
+  background: #222;
+  bottom: 20px;
+  color: #fff;
+  font-size: 1em;
+  padding: 20px;
+  position: fixed;
+  right: 20px; }
+  .floating-btn:hover {
+    background: #16D36B; }
+
+.close-btn {
+  background: #D9534F;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 25px;
+  margin: 10px 10px 0 0;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 5px;
+  width: 25px; }
+  .close-btn:hover {
+    background: #C9302C; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+input, select, button, textarea {
+  outline: none; }
+
+::-webkit-scrollbar {
+  background: white;
+  height: 14px;
+  width: 14px; }
+
+::-webkit-scrollbar-thumb {
+  background: #9D9D9D;
+  border-radius: 10px;
+  border: 2px solid white; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #848484; }
+
+.background {
+  /*background: #333;*/
+  width: 100%;
+  height: 700px;
+  display: initial; }
+
+.floating-btn {
+  background: #222;
+  bottom: 20px;
+  color: #fff;
+  font-size: 1em;
+  padding: 20px;
+  position: fixed;
+  right: 20px; }
+  .floating-btn:hover {
+    background: #16D36B; }
+
+.close-btn {
+  background: #D9534F;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  float: right;
+  font-size: 15px;
+  height: 25px;
+  margin: 10px 10px 0 0;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  top: 5px;
+  width: 25px; }
+  .close-btn:hover {
+    background: #C9302C; }
+
+#title-bar.blur {
+  filter: blur(5px);
+  box-shadow: 0 -10px 0 5px #222;
+  position: relative;
+  transition: filter 1s; }
+
+#title-bar {
+  background: #222;
+  border-bottom: 5px solid #16D36B;
+  height: 90px;
+  width: 100%;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  position: relative; }
+
+#title {
+  left: calc(50% - 40px);
+  margin: auto;
+  position: absolute;
+  width: 60px;
+  padding: 10px;
+  top: 20px; }
+
+.bar-icon {
+  background: black;
+  color: #666;
+  float: right;
+  font-size: 0.8em;
+  height: 30px;
+  padding: 0 10px;
+  -webkit-app-region: no-drag;
+  width: 30px; }
+  .bar-icon:hover {
+    background: #353535;
+    color: white; }
+  .bar-icon.red:hover {
+    background: #D9534F !important;
+    color: white; }
+
+.left {
+  float: left !important; }
+
+#options {
+  font-size: 15px;
+  font-family: "Gugi", cursive;
+  height: fit-content;
+  left: 5px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  -webkit-app-region: no-drag; }
+  #options .separator {
+    color: #777;
+    cursor: default;
+    height: 20px;
+    width: 5px;
+    line-height: 20px;
+    margin: 5px 5px 5px 5px;
+    display: inline-block;
+    text-align: center; }
+  #options > div {
+    color: #D9D9D9;
+    cursor: default;
+    height: 20px;
+    line-height: 20px;
+    margin: 5px 5px 5px 5px;
+    display: inline-block;
+    text-align: center; }
+    #options > div:hover {
+      color: white; }
+    #options > div > div {
+      display: inline-block;
+      height: 25px;
+      width: 25px; }
+
+#pop-up {
+  background: #FFF;
+  height: 230px;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  #pop-up.closed {
+    bottom: -235px;
+    transition: bottom .3s ease-out 0s; }
+  #pop-up.open {
+    bottom: 0;
+    transition: bottom .3s ease-out .3s; }
+  #pop-up #input-panel {
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: fit-content; }
+    #pop-up #input-panel #todo-text {
+      background: #FFF;
+      border: none;
+      color: black;
+      font-family: "Gugi", cursive;
+      font-size: 15px;
+      height: 40px;
+      margin: auto auto 5px;
+      width: 300px; }
+      #pop-up #input-panel #todo-text:hover::placeholder {
+        color: #666666; }
+      #pop-up #input-panel #todo-text:focus::placeholder {
+        color: black;
+        transition-duration: .5s; }
+    #pop-up #input-panel #separator {
+      background: #D9D9D9;
+      height: 2px;
+      margin-bottom: 1px;
+      margin-top: 1px;
+      width: 300px; }
+    #pop-up #input-panel #todo-notes {
+      background: #FFF;
+      border: none;
+      color: black;
+      font-family: "Gugi", cursive;
+      font-size: 15px;
+      height: 60px;
+      overflow: hidden;
+      padding-top: 20px;
+      resize: none;
+      width: 300px; }
+      #pop-up #input-panel #todo-notes:hover::placeholder {
+        color: #666666; }
+      #pop-up #input-panel #todo-notes:focus::placeholder {
+        color: black;
+        transition-duration: .5s; }
+  #pop-up #add-btn {
+    background: #16D36B;
+    border: none;
+    bottom: 0;
+    color: white;
+    height: 50px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%; }
+    #pop-up #add-btn:hover {
+      background: #11A855; }
+    #pop-up #add-btn:disabled {
+      background: #11A855;
+      color: #C1C1C1;
+      cursor: not-allowed; }
+
+/*# sourceMappingURL=new-item-pop-up.css.map */

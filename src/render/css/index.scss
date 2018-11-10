@@ -1,0 +1,39 @@
+@import "main";
+
+#new-item-btn {
+    &.closed {
+        bottom: -75px;
+        transition: bottom .3s ease-out 0s;
+    }
+
+    &.open {
+        bottom: 20px;
+        transition: bottom .3s ease-out .3s;
+    }
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transition-duration: 1s;
+
+    &.blur{
+        filter: none;
+        background: rgba(0, 0, 0, 0.5);
+        display: block;
+    }
+
+    &.null-blur {
+        filter: blur(0);
+        display: none;
+    }
+
+    & > * {
+        display: none;
+    }
+
+}
