@@ -16,6 +16,7 @@ The file is automatically updated (saved) when changes are made.
 ![Test File Opened](images/examples/Test%20File%20Opened.png)
 ![Adding Item to the List](images/examples/Adding%20an%20item%20to%20the%20list.png)
 
+#
 
 _This app is uncompleted with a few features not implemented. E.g. settings page, edit item, etc._
 
